@@ -1,6 +1,6 @@
 
-import { accessKey, UNSPLASHAPI_URL } from "../../utils/api.js"
-
+import { fetchComponent } from "../../utils/fetchComponent.js"
+import { printCards } from "../../utils/printCards.js"
 
 export const mainComponent = () => {
   const body = document.querySelector("body")
@@ -13,10 +13,9 @@ export const mainComponent = () => {
   </main>
   `
 
+  const images = fetchComponent("animales")
+  console.log(images);
 
-  fetch(`${UNSPLASHAPI_URL}?query=animales&client_id=${accessKey}`)
-    .then((res) => res.json())
-    .then((res) => console.log(res))
-
+  printCards(images)
 
 }
