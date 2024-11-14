@@ -1,4 +1,4 @@
-
+import {cardComponent} from "../components/cardComponent/cardComponent.js"
 
 export const printCards = (array) => {
 
