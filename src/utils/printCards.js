@@ -1,8 +1,11 @@
-import {cardComponent} from "../components/cardComponent/cardComponent.js"
+import { cardComponent } from "../components/cardComponent/cardComponent.js"
+
+
 
 export const printCards = (array) => {
 
   const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
 
 
   if (array.length > 0) {

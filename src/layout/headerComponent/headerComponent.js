@@ -1,14 +1,19 @@
+import { inputComponent } from "../../components/inputComponent/inputComponent"
+import { navComponent } from "../../components/navComponent/navComponent"
+import { userComponent } from "../../components/userComponent/userComponent"
 
 
-export const headerComponent = (nav1, input, nav2) => {
+export const headerComponent = () => {
   const body = document.querySelector("body")
 
   body.innerHTML +=
     `
     <header class="flex-around">
-    ${nav1}
-    ${input}
-    ${nav2}
   </header>
   `
+  navComponent()
+  inputComponent()
+  userComponent()
+
+
 }

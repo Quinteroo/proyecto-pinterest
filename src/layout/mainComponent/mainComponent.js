@@ -2,7 +2,7 @@
 import { fetchComponent } from "../../utils/fetchComponent.js"
 import { printCards } from "../../utils/printCards.js"
 
-export const mainComponent = () => {
+export const mainComponent = async () => {
   const body = document.querySelector("body")
 
   body.innerHTML +=
@@ -13,9 +13,11 @@ export const mainComponent = () => {
   </main>
   `
 
-  const images = fetchComponent("animales")
+
+  const images = await fetchComponent("things");
   console.log(images);
 
-  printCards(images)
+  printCards(images.results);
+
 
 }

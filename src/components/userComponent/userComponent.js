@@ -1,6 +1,10 @@
 
 
-export const userComponent = `
+export const userComponent = () => {
+  const header = document.querySelector("header")
+
+  header.innerHTML +=
+    `
       <nav class="hidden">
       <ul class="flex-around">
         <li><img src="/assets/images/icono-notification.png" alt="icono-notification"></li>
@@ -9,3 +13,4 @@ export const userComponent = `
       </ul>
     </nav>
   `
+}

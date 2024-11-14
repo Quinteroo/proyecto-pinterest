@@ -1,6 +1,11 @@
 
 
-export const navComponent = `
+export const navComponent = () => {
+
+  const header = document.querySelector("header")
+
+  header.innerHTML +=
+    `
     <nav>
     <ul class="flex-around">
       <img class="logo" src="/assets/images/logo-pinterest.png" alt="pinterest-logo">
@@ -10,3 +15,6 @@ export const navComponent = `
     </ul>
   </nav>
   `
+
+}
+
