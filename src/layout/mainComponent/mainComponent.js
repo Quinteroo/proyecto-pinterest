@@ -1,6 +1,4 @@
-
-import { fetchComponent } from "../../utils/fetchComponent.js"
-import { printCards } from "../../utils/printCards.js"
+import { fetchComponent } from "../../utils/fetchComponent.js";
 
 export const mainComponent = async () => {
   const body = document.querySelector("body")
@@ -16,8 +14,4 @@ export const mainComponent = async () => {
 
   const images = await fetchComponent("things");
   console.log(images);
-
-  printCards(images.results);
-
-
 }
