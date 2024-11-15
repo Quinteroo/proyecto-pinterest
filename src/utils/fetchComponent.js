@@ -1,13 +1,13 @@
 import { accessKey, UNSPLASHAPI_URL } from "./api.js";
+import { printCards } from "./printCards.js"
 
 
-
-
-export const fetchComponent = async (value) => {
+export const fetchComponent = async (string) => {
   try {
-    const response = await fetch(`${UNSPLASHAPI_URL}?query=${value}&client_id=${accessKey}`);
+    const response = await fetch(`${UNSPLASHAPI_URL}?query=${string}&client_id=${accessKey}`);
     const data = await response.json();
-    return data;
+    printCards(data)
+
   } catch (error) {
     console.error("Error al obtener los datos:", error);
     return [];
