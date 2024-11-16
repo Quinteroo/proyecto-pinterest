@@ -1,6 +1,4 @@
-import { inputComponent } from "../../components/inputComponent/inputComponent"
-import { navComponent } from "../../components/navComponent/navComponent"
-import { userComponent } from "../../components/userComponent/userComponent"
+
 
 
 export const headerComponent = () => {
@@ -11,9 +9,4 @@ export const headerComponent = () => {
     <header class="flex-around">
   </header>
   `
-  navComponent()
-  inputComponent()
-  userComponent()
-
-
 }

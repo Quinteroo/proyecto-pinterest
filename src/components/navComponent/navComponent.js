@@ -1,20 +1,43 @@
+import { fetchComponent } from "../../utils/fetchComponent.js";
 
 
-export const navComponent = () => {
 
-  const header = document.querySelector("header")
+export const navComponent = async () => {
+  const header = document.querySelector("header");
 
-  header.innerHTML +=
-    `
-    <nav>
-    <ul class="flex-around">
-      <img class="logo" src="/assets/images/logo-pinterest.png" alt="pinterest-logo">
-        <li>Inicio</li>
-        <li>Hoy</li>
-        <li class="hidden">Crear</li>
-    </ul>
-  </nav>
-  `
 
-}
+  const nav = document.createElement("nav");
+
+  const ul = document.createElement("ul");
+  ul.classList.add("flex-around");
+
+  const logo = document.createElement("img");
+  logo.classList.add("logo");
+  logo.src = "/assets/images/logo-pinterest.png";
+  logo.alt = "pinterest-logo";
+
+  const liInicio = document.createElement("li");
+  liInicio.textContent = "Inicio";
+
+  liInicio.addEventListener("click", async () => {
+    const images = await fetchComponent("things")
+  })
+
+  const liHoy = document.createElement("li");
+  liHoy.textContent = "Hoy";
+
+  const liCrear = document.createElement("li");
+  liCrear.classList.add("hidden");
+  liCrear.textContent = "Crear";
+
+  ul.appendChild(logo);
+  ul.appendChild(liInicio);
+  ul.appendChild(liHoy);
+  ul.appendChild(liCrear);
+
+  nav.appendChild(ul);
+
+  header.appendChild(nav);
+};
+
 

@@ -3,18 +3,23 @@ import { fetchComponent } from "../../utils/fetchComponent"
 export const inputComponent = async () => {
   const header = document.querySelector("header")
 
-  header.innerHTML +=
-    `
-  <input id="input" class="search-input" placeholder="🔎 Search" type="text">
-  `
+  const body = document.querySelector("body")
 
-  const input = document.querySelector("#input")
+  const input = document.createElement("input")
+  input.classList.add("search-input")
+  input.placeholder = "🔎 Search"
+  input.type = "text"
+
+  header.appendChild(input)
+
+  console.log(input);
 
   input.addEventListener("change", async (e) => {
-    inputValue = e.target.value
-    const images = await fetchComponent(inputValue)
-    console.log(images);
-    let inputValue = ""
-  })
+    let inputValue = e.target.value;
 
+    const images = await fetchComponent(inputValue)
+    input.value = "";
+
+
+  });
 }

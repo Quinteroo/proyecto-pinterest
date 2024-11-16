@@ -7,6 +7,19 @@ import { footerComponent } from "./src/layout/footerComponent/footerComponent.js
 
 
 
-headerComponent()
-mainComponent()
-footerComponent()
+export const app = () => {
+
+  document.addEventListener("DOMContentLoaded", () => {
+    headerComponent()
+    mainComponent()
+    footerComponent()
+
+    navComponent()
+    inputComponent()
+    userComponent()
+  })
+}
+app()
+
+
+

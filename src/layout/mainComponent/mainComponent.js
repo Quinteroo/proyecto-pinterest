@@ -14,4 +14,5 @@ export const mainComponent = async () => {
 
   const images = await fetchComponent("things");
   console.log(images);
+
 }

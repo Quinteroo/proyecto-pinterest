@@ -6,7 +6,9 @@ export const fetchComponent = async (string) => {
   try {
     const response = await fetch(`${UNSPLASHAPI_URL}?query=${string}&client_id=${accessKey}`);
     const data = await response.json();
-    printCards(data)
+    console.log(data);
+
+    printCards(data.results)
 
   } catch (error) {
     console.error("Error al obtener los datos:", error);
