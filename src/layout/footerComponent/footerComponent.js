@@ -1,4 +1,4 @@
-
+import "./footerComponent.css"
 
 export const footerComponent = () => {
   const body = document.querySelector("body")

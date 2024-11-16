@@ -1,3 +1,4 @@
+import "./navComponent.css"
 import { fetchComponent } from "../../utils/fetchComponent.js";
 
 

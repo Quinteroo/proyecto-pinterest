@@ -1,4 +1,4 @@
-
+import "./headerComponent.css"
 
 
 export const headerComponent = () => {

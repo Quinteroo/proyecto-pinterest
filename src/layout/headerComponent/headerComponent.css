@@ -1,0 +1,19 @@
+header{
+  width: 100%;
+  margin: 0;
+  background-color: var(--mqg-primary-background);
+  padding: 5px;
+  height: 15vh;
+
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 575px) {
+  
+  header{
+    width: 95%;
+    height: 15vh;
+    padding: 1% ;
+  }
+}

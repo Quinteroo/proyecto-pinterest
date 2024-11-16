@@ -1,3 +1,4 @@
+import "./mainComponent.css"
 import { fetchComponent } from "../../utils/fetchComponent.js";
 
 export const mainComponent = async () => {

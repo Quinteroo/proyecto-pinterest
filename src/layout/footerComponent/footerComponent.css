@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: var(--mqg-primary-background);
+  padding: 5px;
+}
+
+@media (max-width: 575px) {
+  
+  footer {
+    width: 95%;
+  }
+}

@@ -1,0 +1,17 @@
+main{
+  width: 100%;
+  margin: 0;
+  background-color: var(--mqg-primary-background);
+  padding: 5px;
+  min-height: 100vh;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 575px) {
+  
+  main{
+    width: 95%;
+  }
+
+}

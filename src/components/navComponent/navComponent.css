@@ -1,0 +1,10 @@
+.logo {
+  width: 5vh;
+}
+
+@media (max-width: 575px) {
+
+  .logo {
+    width: 5vh;
+  }
+}
