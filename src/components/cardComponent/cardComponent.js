@@ -1,4 +1,5 @@
 import "./cardComponent.css"
+import { getRandomColor } from "../../utils/getRanomColor.js";
 
 
 export const cardComponent = (image) => {
