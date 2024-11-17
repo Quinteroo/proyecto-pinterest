@@ -5,21 +5,15 @@ import { headerComponent } from "./src/layout/headerComponent/headerComponent";
 import { mainComponent } from "./src/layout/mainComponent/mainComponent.js";
 import { footerComponent } from "./src/layout/footerComponent/footerComponent.js"
 
+document.addEventListener("DOMContentLoaded", () => {
+  headerComponent()
+  mainComponent()
+  footerComponent()
 
-
-export const app = () => {
-
-  document.addEventListener("DOMContentLoaded", () => {
-    headerComponent()
-    mainComponent()
-    footerComponent()
-
-    navComponent()
-    inputComponent()
-    userComponent()
-  })
-}
-app()
+  navComponent()
+  inputComponent()
+  userComponent()
+})
 
 
 

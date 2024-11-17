@@ -1,21 +1,21 @@
 import { cardComponent } from "../components/cardComponent/cardComponent.js"
+import { fetchComponent } from "./fetchComponent.js";
 
 
 
-export const printCards = (array) => {
+export const printCards = async (array) => {
 
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = "";
 
 
   if (array.length > 0) {
-    array.forEach((image) => {
-      const card = cardComponent(image)
+    array.forEach((obj) => {
+      const card = cardComponent(obj)
       gallery.appendChild(card);
     });
   } else {
-    gallery.innerHTML = "<p>No se encontraron imágenes.</p>";
+    const images = await fetchComponent("cats")
+    alert("No se encontraron imágenes! 🥰 Prueba con otra palabra!")
   }
-
-
 }
