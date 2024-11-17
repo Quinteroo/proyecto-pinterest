@@ -9,9 +9,3 @@ footer > p {
   text-align: center;
 }
 
-@media (max-width: 575px) {
-  
-  footer {
-    width: 95%;
-  }
-}
